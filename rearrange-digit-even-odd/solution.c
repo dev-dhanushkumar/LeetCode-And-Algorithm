@@ -38,6 +38,20 @@ void displayArr(int arr[], int n){
     }
 }
 
+int digitToNum(int arr[], int len) {
+    long int digit = 0,mul = 10;
+    for(int i = len-1; i >= 0; i--) { 
+        if(i == len-1) {
+            digit += arr[i] * 1;
+        } else {
+            digit += (arr[i] * mul);
+            mul *= 10;
+        }
+    }
+
+    return digit;
+}
+
 // Odd arrange in right side and even arrange in left side
 void arraySlice(int arr[], int n) {
     int low = 0, mid = 0, high = n - 1;
@@ -65,7 +79,7 @@ void arraySlice(int arr[], int n) {
 
 
 void main() {
-    long int n  = 83143765;
+    long int n  = 52963;
 
     // Get length of digit
     int len = digitLen(n);
@@ -94,5 +108,9 @@ void main() {
     printf("\nFinal Sorted Array even follow odd:");
     printf("\n\n");
     displayArr(arr,len);
+
+    printf("\n");
+    n = digitToNum(arr, len);
+    printf("\nFinal Digit: %ld", n);
 
 }
