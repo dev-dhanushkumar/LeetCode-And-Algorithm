@@ -38,6 +38,7 @@ void displayArr(int arr[], int n){
     }
 }
 
+// Convvert Array Digit to Number
 int digitToNum(int arr[], int len) {
     long int digit = 0,mul = 10;
     for(int i = len-1; i >= 0; i--) { 
@@ -79,7 +80,7 @@ void arraySlice(int arr[], int n) {
 
 
 void main() {
-    long int n  = 52963;
+    long int n  = 529638417;
 
     // Get length of digit
     int len = digitLen(n);
@@ -109,6 +110,8 @@ void main() {
     printf("\n\n");
     displayArr(arr,len);
 
+
+    //Print final Digit
     printf("\n");
     n = digitToNum(arr, len);
     printf("\nFinal Digit: %ld", n);
