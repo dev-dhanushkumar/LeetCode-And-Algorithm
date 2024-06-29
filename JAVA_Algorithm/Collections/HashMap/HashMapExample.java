@@ -1,17 +1,16 @@
-package JAVA_Algorithm.Collections.HashMap;
-
-import java.util.*;
+import java.util.HashMap;
 
 public class HashMapExample {
-    public static void main(String[] args) {
-        HashMap<String, Integer> map = new HashMap<>();
+  public static void main(String[] args) {
+    HashMap<String, Integer> map = new HashMap<>();
+    map.put("Dhanush", 100);
+    map.put("Raj", 189);
+    map.put("Kumar",123);
 
-
-        map.put("Dhanush", 45);
-        map.put("Shanak", 76);
-        map.put("Muthu", 55);
-        map.put("sam", 50);
-
-        System.out.println(map);
+    if(map.containskey("Raj")){
+      System.out.println("Raj");
     }
+
+    System.out.println(map);
+  }
 }
