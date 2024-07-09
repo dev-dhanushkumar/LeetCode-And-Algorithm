@@ -13,6 +13,7 @@ public class SecurityStringKey {
     System.out.println(word2);
 
     System.out.println(word2.get(0)+word1.get(0)+word1.get(1)+word2.get(1));
+    sc.close();
 
   }
 
