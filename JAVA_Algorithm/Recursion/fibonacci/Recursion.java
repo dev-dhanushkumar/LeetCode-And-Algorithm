@@ -19,5 +19,6 @@ class Recursion {
     int N = sc.nextInt();
 
     System.out.println(fib(N));
+    sc.close();
   }
 }
