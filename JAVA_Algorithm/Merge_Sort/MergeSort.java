@@ -15,6 +15,9 @@ public class MergeSort {
         sc.close();
         mergeSort(arr, 0, n-1);
 
+        for(int i = 0; i < arr.length; i++) {
+            System.out.print(arr[i]+" ");
+        }
     }
 
     public static void mergeSort(int[] arr, int low, int high) {
@@ -36,7 +39,24 @@ public class MergeSort {
             if(arr[left] < arr[right]) {
                 temp.add(arr[left]);
                 left++;
+            } else {
+                temp.add(arr[right]);
+                right++;
             }
+        }
+
+        while(left <= mid) {
+            temp.add(arr[left]);
+            left++;
+        }
+
+        while(right <= high) {
+            temp.add(arr[right]);
+            right++;
+        }
+
+        for(int i = low; i <= high; i++) {
+            arr[i] = temp.get(i - low);
         }
     }
 }
